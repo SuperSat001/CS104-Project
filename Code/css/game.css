@@ -1,0 +1,108 @@
+body {
+  background-color: rgb(19, 109, 21);
+  font-family: Arial, sans-serif;
+}
+
+#box {
+  text-align: center;
+  padding-top: 50px;
+}
+
+#game {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+
+#scoreboard {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 120px;
+  text-align: left;
+}
+
+.score-info {
+  display: flex;
+  align-items: center;
+}
+
+.score-info p {
+  margin-right: 10px;
+  padding-right: 30px;
+}
+
+#scoreboard p {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+
+#field table {
+  border-collapse: collapse;
+  font-size: calc(0.6 * 600px / var(--grid-size));
+  font-weight: bold;
+  display: inline-block;
+}
+
+#field table td {
+  background-color: rgb(226, 176, 126);
+  width: calc(600px / var(--grid-size));
+  height: calc(600px / var(--grid-size));
+  min-width: 30px;
+  min-height: 30px;
+  border: 1px solid black;
+  text-align: center;
+  vertical-align: middle;
+}
+
+button {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+#stats {
+  padding-bottom: 50px;
+}
+
+#stats table {
+  border-collapse: collapse;
+  width: 40%;
+  color: white;
+}
+
+#stats th, td {
+  border: 1px solid white;
+  padding: 8px;
+}
+
+#stats th {
+  font-weight: bold;
+}
+
+#stats tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#stats tr:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}

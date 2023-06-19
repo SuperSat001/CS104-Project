@@ -1,0 +1,53 @@
+/* Modified from https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+
+#customSlider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 20%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('../images/ball.png');
+  background-size: cover; /* or use 'contain' to fit inside the thumb */
+  background-position: center;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('../images/ball.png');
+  background-size: cover; /* or use 'contain' to fit inside the thumb */
+  background-position: center;
+  cursor: pointer;
+}
+
+#customSlider p{
+  color: white; 
+  font-size: 200%;
+}

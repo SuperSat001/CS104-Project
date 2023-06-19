@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Settings</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../css/game.css" type="text/css" />
+    <link rel="stylesheet" href="../css/navbar.css" type="text/css" />
+    <link rel="icon" href="../images/siteicon.png" type="image/x-icon">
+
+    <style>
+        img {
+          float: left;
+          border: 1px dotted black;
+          margin: 0px 15px 15px 15px;
+        }
+
+        body {
+            font-size: 20px;
+            color: white;
+        }
+        </style>
+
+  </head>
+  <body>
+
+    <div id="navbar">
+      <a href="./game.html" class="nav-link">Game</a>
+      <a href="./tutorial.html" class="nav-link active">How to Play</a>
+      <a href="./settings.html" style="float: right;" class="nav-link">&#9881</a>
+    </div>
+
+<p style="padding-top: 60px;">
+    This game is a combination of minesweeper and cricket. There are 11 fielders placed randomly in the grid, and your aim is to maximise the runs scored in 1 minute without getting all-out.
+    <br>
+    Go to <a href="./settings.html">settings</a> and select your Grid Size and number of Wickets.
+    Now move on to <a href="./game.html">the game</a> and have fun.
+</p>
+
+<h2><u>The Cells</u></h2>
+
+<p>
+    <img src="../images/tutorial.png" width="200" height="200">
+    Right click to reveal a cell. The cell can be either a fielder or a number.
+    <br>
+    You can also left click a cell to place a flag on it if you suspect it is a fielder. This doesn't confirm your suspicions but prevents loss by misclicks.
+    <br> <br>
+    If it's a fielder, you lose a wicket.
+    <br>
+    If it's a number instead, it denotes the total number of fielders present in the 8 cells which are adjecent to it. Here, the number is 3. Hence there are exactly 3 fielders in the surrounding 8 cells.
+
+</p>
+<br> <br>
+
+<h2><u>The Streak</u></h2>
+
+<p>
+    The faster you play, the greater is the rate of increase of your score.
+    <br> <br>
+    You must reveal a cell within 1 second of last reveal to maintain your streak.
+</p>
+
+<br> 
+
+<h2><u>The End</u></h2>
+
+<p>
+    The game ends if either your time runs out, you reveal all the non-fielder cells or you get all-out.
+    <br> <br>
+    Your final score is the sum of runs scored in each wicket.
+</p>
+
+
+  </body>
+</html>

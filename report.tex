@@ -1,0 +1,118 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage[rightcaption]{sidecap}
+\usepackage{verbatim}
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+\addbibresource{report.bib}
+\usepackage [ a4paper , hmargin =1.2 in , bottom =1.5 in ] { geometry }
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\bibliography{references}
+% Add header and footer code here
+\fancyhead[L]{Minesweeper Cricket}
+\fancyhead[R]{Satyankar Chandra}
+\fancyfoot[C]{Page \thepage}
+
+% You may also add path to the images optionally
+\graphicspath{ {./images/} }
+
+\begin{document}
+
+% preamble
+
+\title{\textbf{CS104 Project \\ Minesweeper Cricket}}
+\date{}
+\author{Satyankar Chandra \\ 22B0967}
+\maketitle
+% below line auto generates the table of contents
+% thank me for your free 1 mark
+\tableofcontents
+\clearpage
+\pagestyle{fancy}
+%code of section 1, with lists
+\section{Introduction}
+The aim of this project was to implement a combination of two classical games - minesweeper and cricket. The game is built in HTML and CSS, with the interactive functionality added through JavaScript. I used Git as a version control system throughout this project to effectively manage multiple files of code.\\
+
+\noindent
+The game incorporates the grid generation and cell numbering of minesweeper, with the scoring system and wickets of cricket. The scoring mechanics also provide an incentive to play as fast as possible and maximise the scoring streak. There is a 1 minute timer in which the player has to score maximum runs. \\
+
+\noindent
+The game ends if either the time runs out, all the non-fielder cells are revealed, or the player gets all-out.
+
+\section{Overview}
+The basic minesweeper code was obtained from \href{https://arghac14.github.io/Minesweeper/}{GitHub repository}. \\
+
+As per the basic requirements, I modified the JS code to not reveal multiple cells together, and fixed the number of fielders (bombs) to 11. I rewrote the bomb placement function, the scoring function, and the click handling functions. I also added more customizable variables in the \textit{components} dictionary to account for the streak, wickets and timer mechanism. \\
+
+I modified the HTML to add a navbar, scoreboard, game stats and a \href{https://www.cssscript.com/confetti-falling-animation/}{confetti} effect after completion of the game. \\
+
+I heavily edited the CSS file, changed fonts and colours, and made the grid cells size dynamically. \\
+
+I created 2 more pages, one for the \textbf{game settings} and one for the \textbf{instructions} and their related CSS and JS.
+
+\newpage
+
+\section{Basic Logic}
+The game is implemented using the following ideas: \\ 
+\begin{itemize}
+\item{Grid Generation - The grid is generated using JS by creating table.}
+\item{Bomb placement - Done using \textit{sets} and \textit{Math.random()} so that bombs don't repeat positions.}
+\item{Scoring - The streak system is implemented using \textit{time} library, a function checks whether 2 moves were made close enough to maintain the streak and increases the score based on it.}
+\item{Start and end functions - Called once, the start functions sets several variables in \textit{components} from the browser \textbf{localStorage}. The end functions account for different outcomes.}
+\end{itemize}
+
+
+\section{Customization}
+Their are several customizations: \\ 
+\begin{itemize}
+\item{Cell numbering is done via the \textbf{minesweeper algorithm}, which makes the game more skill inclined and reduces randomness}
+\item{One minute \textbf{timer} to complete the game}
+\item{\textbf{Scoring streaks} motivate the player to play faster as higher streak adds more to the score}
+\item{Customizable grid size and number of wickets across different \textit{html} pages using brower \textbf{localStorage}}
+\item{\textbf{Game stats} at the end of game showing the individual player scores}
+\item{Sliders and \textbf{confetti effect} implemented in JS and styled via CSS}
+\item{Added \textbf{navbar} and other components}
+
+\end{itemize}
+
+
+\newpage
+
+\section{Syntax}
+%para
+
+Open the \textit{settings.html} file to set the game parameters. \\
+
+\noindent
+Then navigate to the \textit{game.html} file to play the game.
+
+\section{Source Code}
+The source code of the website can be found in my \href{https://github.com/SuperSat001/CS104-Project}{GitHub Repo} and has also been submitted.
+
+\section{Bibiliography}
+
+All the references are cited below, from the \textit{report.bib} file.
+
+\cite{minesweeper} \cite{slider} \cite{confetti} \cite{navbar}
+
+\printbibliography
+
+\end{document}

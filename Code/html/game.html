@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cricksweeper</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../css/game.css" type="text/css" />
+    <link rel="stylesheet" href="../css/navbar.css" type="text/css" />
+    <script src="../js/confetti.js"></script>
+    <script type="text/javascript" src="../js/game.js"></script>
+    <link rel="icon" href="../images/siteicon.png" type="image/x-icon">
+  </head>
+  <body>
+    <canvas id="confetti-canvas"></canvas>
+
+    <div id="navbar">
+      <a href="./game.html" class="nav-link active">Game</a>
+      <a href="./tutorial.html" class="nav-link">How to Play</a>
+      <a href="./settings.html" style="float: right;" class="nav-link">&#9881</a>
+    </div>
+
+    <div id="box">
+      <div id="game">
+        <div id="field"></div>
+        <div id="scoreboard">
+          <p id="timer" style="color: white; font-size: 500%;">00:60</p>
+
+          <p>Score :</p>
+          <div class="score-info">
+            <p id="total" style="color: white; font-size: 300%">0</p>
+            <div id="added" style="color: white; font-size: 200%"></div>
+          </div>
+
+          <p>Streak :</p>
+          <p id="streak" style="color: white; font-size: 300%">0</p>
+        </div>
+      </div>
+    </div>
+    <div id="lost" style="display: none">
+      <hr>
+      <p id = "statsintro" style="color: white; font-size: 400%">Game Stats :</p>
+      <div id="stats"></div>
+      <button id="new-game-button" type="button" onclick="reload()">
+        Start Again
+      </button>
+    </div>
+  </body>
+</html>
